@@ -19,8 +19,8 @@
                 <div class="hidden md:block">
                     <div class="ml-10 flex items-baseline space-x-4">
                         <x-nav-link href="/" :active="request()->is('/')">Home</x-nav-link>
-                        <x-nav-link href="/about" :active="request()->is('about')">About</x-nav-link>
-                        <x-nav-link href="/contact" :active="request()->is('contact')">Contact</x-nav-link>
+                        <x-nav-link href="/jobs" :active="request()->is('jobs*')">Jobs</x-nav-link>
+
                     </div>
                 </div>
             </div>
@@ -30,13 +30,13 @@
     <header class="bg-white shadow">
         <div class="mx-auto max-w-7xl py-6 px-4 sm:px-6 lg:px-8">
             <h1 class="text-3xl font-bold text-gray-900">
-                {{ $heading }}
+            {{ $heading }}
             </h1>
         </div>
     </header>
 
     <main class="mx-auto max-w-7xl py-6 sm:px-6 lg:px-8">
-        <div class="bg-white rounded-xl shadow-md p-6">
+    <div class="bg-white/80 backdrop-blur-md border border-gray-200 rounded-xl shadow-lg p-6">
             {{ $slot }}
         </div>
     </main>
