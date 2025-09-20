@@ -10,4 +10,20 @@ class Job extends Model
 use HasFactory;
 
 protected $table = 'job_listings';
+
+public function employer()
+{
+return $this->belongsTo(\App\Models\Employer::class);
+}
+
+public function tags()
+    {
+        return $this->belongsToMany(
+            \App\Models\Tag::class,
+            'job_listing_tag',   
+            'job_listing_id',    
+            'tag_id'             
+        );
+    }
+
 }

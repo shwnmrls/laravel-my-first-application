@@ -8,13 +8,23 @@
             <div class="p-6 rounded-xl shadow-md border border-gray-200 hover:shadow-xl transition 
                         bg-gradient-to-r from-indigo-100 via-white to-indigo-50">
                 <h2 class="text-xl font-semibold text-gray-800">
-                    <a href="/jobs/{{ $job['id'] }}" class="text-blue-700 hover:underline">
-                        {{ $job['title'] }}
+                    <a href="/jobs/{{ $job['id'] }}" class="text-blue-500 hover:underline">
+                        <strong class="text-laracasts">{{ $job->employer->name }}:</strong> 
+                        {{ $job['title'] }} pays {{ $job['salary'] }} per year.
                     </a>
                 </h2>
                 <p class="text-gray-700 mt-1">
                     Salary: <span class="font-medium text-green-600">{{ $job['salary'] }}</span> per year
                 </p>
+
+                <div class="px-4 py-4">
+                    @foreach($job->tags as $tag)
+                        <span class="bg-gray-200 text-gray-700 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded-full">
+                            {{ $tag->name }}
+                        </span>
+                    @endforeach
+                </div>
+
                 <a href="/jobs/{{ $job['id'] }}" 
                    class="inline-block mt-4 px-4 py-2 text-sm font-medium text-white bg-blue-600 rounded-lg hover:bg-blue-700">
                     View Details

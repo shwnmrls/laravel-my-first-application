@@ -5,6 +5,7 @@
 
     <div class="max-w-2xl mx-auto mt-10 p-8 rounded-2xl shadow-lg border border-gray-200 
                 bg-gradient-to-br from-purple-100 via-white to-blue-100">
+        <p class="text-sm text-gray-500">{{ $job->employer->name }}</p>
         <h2 class="text-2xl font-bold text-gray-900">{{ $job['title'] }}</h2>
         <p class="mt-3 text-lg text-gray-700">
             This job pays 
