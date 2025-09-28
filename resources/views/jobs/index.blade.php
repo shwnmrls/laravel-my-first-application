@@ -9,7 +9,7 @@
                         bg-gradient-to-r from-indigo-100 via-white to-indigo-50">
                 <h2 class="text-xl font-semibold text-gray-800">
                     <a href="/jobs/{{ $job['id'] }}" class="text-blue-500 hover:underline">
-                        <strong class="text-laracasts">{{ $job->employer->name }}:</strong> 
+                        <strong class="text-laracasts">{{ $job->employer->name ?? 'No Employer' }}:</strong> 
                         {{ $job['title'] }} pays {{ $job['salary'] }} per year.
                     </a>
                 </h2>

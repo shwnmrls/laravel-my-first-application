@@ -13,15 +13,23 @@
             per year.
         </p>
 
-        <div class="mt-8 flex justify-between">
+        <div class="mt-8 flex justify-between items-center">
             <a href="/jobs" 
                class="px-4 py-2 text-sm font-medium text-gray-700 bg-gray-200 rounded-lg hover:bg-gray-300">
                 ← Back to Jobs
             </a>
-            <a href="#" 
-               class="px-4 py-2 text-sm font-medium text-white bg-blue-600 rounded-lg hover:bg-blue-700">
-                Apply Now
-            </a>
+
+            <div class="flex gap-3">
+                <a href="/jobs/{{ $job->id }}/edit" 
+                   class="px-4 py-2 text-sm font-medium text-yellow-600 bg-yellow-100 rounded-lg hover:bg-yellow-200">
+                    ✏️ Edit Job
+                </a>
+
+                <a href="#" 
+                   class="px-4 py-2 text-sm font-medium text-white bg-blue-600 rounded-lg hover:bg-blue-700">
+                    Apply Now
+                </a>
+            </div>
         </div>
     </div>
 </x-layout>
